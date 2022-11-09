@@ -1,5 +1,4 @@
 from turtle import Turtle
-import random
 
 STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
 MOVE_DISTANCE = 20
@@ -21,8 +20,8 @@ class Snake:
             self.add_segment(position)
 
     def add_segment(self, position):
-        segment = Turtle("circle")
-        segment.color(random.choice(["white", "red"]))
+        segment = Turtle("square")
+        segment.color("white")
         segment.penup()
         segment.goto(position)
         self.segments.append(segment)
